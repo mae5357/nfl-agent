@@ -2,14 +2,22 @@
 
 from cachetools import TTLCache
 
-# TTL caches (5 minute expiration)
-teams_cache: TTLCache = TTLCache(maxsize=1, ttl=300)
+# TTL caches with appropriate expiration times
+teams_cache: TTLCache = TTLCache(maxsize=32, ttl=300)  # Team info: 5 minutes
+depth_cache: TTLCache = TTLCache(maxsize=32, ttl=604800)  # Depth charts: 1 week (7 days)
+athlete_cache: TTLCache = TTLCache(maxsize=200, ttl=86400)  # Athlete bio: 1 day (24 hours)
+stats_cache: TTLCache = TTLCache(maxsize=200, ttl=3600)  # Player stats: 1 hour
+
+# Legacy caches (kept for backwards compatibility if needed)
 standings_cache: TTLCache = TTLCache(maxsize=1, ttl=300)
 roster_cache: TTLCache = TTLCache(maxsize=32, ttl=300)
 
 
 def clear_cache() -> None:
     teams_cache.clear()
+    depth_cache.clear()
+    athlete_cache.clear()
+    stats_cache.clear()
     standings_cache.clear()
     roster_cache.clear()
 
@@ -18,7 +26,7 @@ _client = None
 
 
 def get_espn_client():
-    from nfl_agent.src.utils.client import ESPNClient
+    from nfl_agent.src.utils.espn_client import ESPNClient
 
     global _client
     if _client is None:

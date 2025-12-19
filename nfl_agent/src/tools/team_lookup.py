@@ -1,49 +1,43 @@
 from langchain_core.tools import tool
 
-from nfl_agent.src.models.stats import Team, Player
-from nfl_agent.src.utils.cache import get_espn_client
-from nfl_agent.src.utils.client import ESPNPlayer
+from nfl_agent.src.models.stats import Team
+from nfl_agent.src.utils.cache_utils import get_espn_client
 
-
-def _parse_height_to_inches(height_str: str) -> int:
-    import re
-
-    match = re.match(r"(\d+)'(\d+)\"?", height_str)
-    if match:
-        feet = int(match.group(1))
-        inches = int(match.group(2))
-        return feet * 12 + inches
-    return 0
-
-
-def _extract_player_data(player_data: ESPNPlayer, team_name: str) -> Player:
-    return Player(
-        name=player_data.fullName,
-        team=team_name,
-        position=player_data.position,
-        height=_parse_height_to_inches(player_data.height),
-        weight=player_data.weight,
-        age=player_data.age,
-        is_injured=False,
-        key_stats=[],
-    )
-
-
-def _get_key_players(
-    roster: list[ESPNPlayer], team_name: str, limit: int = 5
-) -> list[Player]:
-    """Extract key players from roster (prioritize QB, RB, WR positions)."""
-    priority_positions = ["QB", "RB", "WR", "TE", "LB", "CB", "DE"]
-    key_players: list[Player] = []
-
-    for position in priority_positions:
-        for player in roster:
-            if player.position == position and len(key_players) < limit:
-                key_players.append(_extract_player_data(player, team_name))
-        if len(key_players) >= limit:
-            break
-
-    return key_players
+# ESPN Team ID mapping (updated for 2024 season)
+TEAM_NAME_TO_ID = {
+    "arizona cardinals": "22",
+    "atlanta falcons": "1",
+    "baltimore ravens": "33",
+    "buffalo bills": "2",
+    "carolina panthers": "29",
+    "chicago bears": "3",
+    "cincinnati bengals": "4",
+    "cleveland browns": "5",
+    "dallas cowboys": "6",
+    "denver broncos": "7",
+    "detroit lions": "8",
+    "green bay packers": "9",
+    "houston texans": "34",
+    "indianapolis colts": "11",
+    "jacksonville jaguars": "30",
+    "kansas city chiefs": "12",
+    "las vegas raiders": "13",
+    "los angeles chargers": "24",
+    "los angeles rams": "14",
+    "miami dolphins": "15",
+    "minnesota vikings": "16",
+    "new england patriots": "17",
+    "new orleans saints": "18",
+    "new york giants": "19",
+    "new york jets": "20",
+    "philadelphia eagles": "21",
+    "pittsburgh steelers": "23",
+    "san francisco 49ers": "25",
+    "seattle seahawks": "26",
+    "tampa bay buccaneers": "27",
+    "tennessee titans": "10",
+    "washington commanders": "28",
+}
 
 
 @tool
@@ -53,19 +47,22 @@ def get_team_info(team_name: str) -> Team:
     team_name is case-insensitive and should be the full team name (e.g. "Kansas City Chiefs")
     """
     client = get_espn_client()
-    team_data = client.get_team_with_record_by_name(team_name)
-    if not team_data:
-        raise ValueError(f"Team '{team_name}' not found")
-
-    # Get roster for key players
-    basic_team = client.get_team_by_name(team_name)
-    roster = client.get_team_roster(basic_team)
-    key_players = _get_key_players(roster, team_data.displayName)
-
-    return Team(
-        name=team_data.displayName,
-        abbreviation=team_data.abbreviation,
-        rank=team_data.rank,
-        record=team_data.record,
-        key_players=key_players,
-    )
+    
+    # Normalize team name and look up ID
+    team_name_lower = team_name.lower().strip()
+    team_id = TEAM_NAME_TO_ID.get(team_name_lower)
+    
+    if not team_id:
+        # Try partial match
+        for name, tid in TEAM_NAME_TO_ID.items():
+            if team_name_lower in name or name in team_name_lower:
+                team_id = tid
+                break
+    
+    if not team_id:
+        available_teams = ", ".join(sorted(TEAM_NAME_TO_ID.keys()))
+        raise ValueError(
+            f"Team '{team_name}' not found. Available teams: {available_teams}"
+        )
+    
+    return client.build_team(team_id)

@@ -1,32 +1,7 @@
-import re
-
 from langchain_core.tools import tool
 
 from nfl_agent.src.models.stats import Player
-from nfl_agent.src.utils.cache import get_espn_client
-from nfl_agent.src.utils.client import ESPNPlayer
-
-
-def _parse_height_to_inches(height_str: str) -> int:
-    match = re.match(r"(\d+)'(\d+)\"?", height_str)
-    if match:
-        feet = int(match.group(1))
-        inches = int(match.group(2))
-        return feet * 12 + inches
-    return 0
-
-
-def _extract_player_data(player_data: ESPNPlayer, team_name: str) -> Player:
-    return Player(
-        name=player_data.fullName,
-        team=team_name,
-        position=player_data.position,
-        height=_parse_height_to_inches(player_data.height),
-        weight=player_data.weight,
-        age=player_data.age,
-        is_injured=False,
-        key_stats=[],
-    )
+from nfl_agent.src.tools.team_lookup import get_team_info
 
 
 @tool
@@ -34,15 +9,35 @@ def get_player_info(player_name: str, team_name: str) -> Player:
     """Fetch NFL player information from ESPN by player name and team name.
 
     player name and team name are case-insensitive
+    
+    This tool searches for the player within the team's key players (QB, skill players, defensive player).
     """
-    client = get_espn_client()
-    team = client.get_team_by_name(team_name)
-    if not team:
-        raise ValueError(f"Team '{team_name}' not found")
-
-    roster = client.get_team_roster(team)
-    player_data = client.find_player_in_roster(roster, player_name)
-    if not player_data:
-        raise ValueError(f"Player '{player_name}' not found on team '{team_name}'")
-
-    return _extract_player_data(player_data, team.displayName)
+    # Get team data which includes key players
+    team = get_team_info.invoke({"team_name": team_name})
+    
+    # Search for player in team's key players
+    player_name_lower = player_name.lower().strip()
+    
+    # Check QB
+    if player_name_lower in team.qb_player.name.lower():
+        return team.qb_player
+    
+    # Check skill players
+    for skill_player in team.skill_stats:
+        if player_name_lower in skill_player.name.lower():
+            return skill_player
+    
+    # Check defensive player
+    if team.def_player and player_name_lower in team.def_player.name.lower():
+        return team.def_player
+    
+    # Check injured players
+    for injured_player in team.injured_players:
+        if player_name_lower in injured_player.name.lower():
+            return injured_player
+    
+    # Player not found in key players
+    raise ValueError(
+        f"Player '{player_name}' not found in {team_name}'s key players. "
+        f"Note: This tool only searches QB, top skill players (RB/WR/TE), and defensive player."
+    )
