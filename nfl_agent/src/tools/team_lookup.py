@@ -65,4 +65,5 @@ def get_team_info(team_name: str) -> Team:
             f"Team '{team_name}' not found. Available teams: {available_teams}"
         )
     
-    return client.build_team(team_id)
+    team = client.build_team(team_id)
+    return team
