@@ -4,13 +4,13 @@ from cachetools import TTLCache
 
 # TTL caches with appropriate expiration times
 teams_cache: TTLCache = TTLCache(maxsize=32, ttl=300)  # Team info: 5 minutes
-depth_cache: TTLCache = TTLCache(maxsize=32, ttl=604800)  # Depth charts: 1 week (7 days)
-athlete_cache: TTLCache = TTLCache(maxsize=200, ttl=86400)  # Athlete bio: 1 day (24 hours)
+depth_cache: TTLCache = TTLCache(
+    maxsize=32, ttl=604800
+)  # Depth charts: 1 week (7 days)
+athlete_cache: TTLCache = TTLCache(
+    maxsize=200, ttl=86400
+)  # Athlete bio: 1 day (24 hours)
 stats_cache: TTLCache = TTLCache(maxsize=200, ttl=3600)  # Player stats: 1 hour
-
-# Legacy caches (kept for backwards compatibility if needed)
-standings_cache: TTLCache = TTLCache(maxsize=1, ttl=300)
-roster_cache: TTLCache = TTLCache(maxsize=32, ttl=300)
 
 
 def clear_cache() -> None:

@@ -1,0 +1,783 @@
+{
+    "items": [
+        {
+            "id": "15",
+            "name": "Base 3-4 D",
+            "positions": {
+                "lde": {
+                    "position": {
+                        "abbreviation": "LDE",
+                        "name": "Left Defensive End",
+                        "displayName": "Left Defensive End"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4376288?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4039170?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4426412?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "nt": {
+                    "position": {
+                        "abbreviation": "NT",
+                        "name": "Nose Tackle",
+                        "displayName": "Nose Tackle"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4430271?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3116726?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rde": {
+                    "position": {
+                        "abbreviation": "RDE",
+                        "name": "Right Defensive End",
+                        "displayName": "Right Defensive End"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4002046?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4427090?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4077786?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "wlb": {
+                    "position": {
+                        "abbreviation": "WLB",
+                        "name": "Weakside Linebacker  ",
+                        "displayName": "Weakside Linebacker"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3043136?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4257591?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4039029?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "lilb": {
+                    "position": {
+                        "abbreviation": "LILB",
+                        "name": "Left Inside Linebacker  ",
+                        "displayName": "Left Inside Linebacker"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4037626?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4428872?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3128303?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 4,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4243457?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rilb": {
+                    "position": {
+                        "abbreviation": "RILB",
+                        "name": "Right Inside Linebacker",
+                        "displayName": "Right Inside Linebacker"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3124890?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3859006?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4247807?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "slb": {
+                    "position": {
+                        "abbreviation": "SLB",
+                        "name": "Strongside Linebacker  ",
+                        "displayName": "Strongside Linebacker"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4685597?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/5081394?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4428713?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "lcb": {
+                    "position": {
+                        "abbreviation": "LCB",
+                        "name": "Left Cornerback",
+                        "displayName": "Left Cornerback"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 8,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4239995?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 8,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4689989?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 8,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4240596?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "ss": {
+                    "position": {
+                        "abbreviation": "SS",
+                        "name": "Strong Safety",
+                        "displayName": "Strong Safety"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3919512?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4430411?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4567111?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "fs": {
+                    "position": {
+                        "abbreviation": "FS",
+                        "name": "Free Safety",
+                        "displayName": "Free Safety"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4431005?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4684636?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rcb": {
+                    "position": {
+                        "abbreviation": "RCB",
+                        "name": "Right Cornerback",
+                        "displayName": "Right Cornerback"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3895841?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4429324?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4429067?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "nb": {
+                    "position": {
+                        "abbreviation": "NB",
+                        "name": "Nickel Back",
+                        "displayName": "Nickel Back"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 12,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4401823?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 12,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3050916?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 12,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4431194?lang=en&region=us"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "18",
+            "name": "Special Teams",
+            "positions": {
+                "pk": {
+                    "position": {
+                        "abbreviation": "PK",
+                        "name": "Place kicker",
+                        "displayName": "Place Kicker"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3043234?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "p": {
+                    "position": {
+                        "abbreviation": "P",
+                        "name": "Punter",
+                        "displayName": "Punter"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/2977680?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "h": {
+                    "position": {
+                        "abbreviation": "H",
+                        "name": "Holder",
+                        "displayName": "Holder"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/2977680?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "pr": {
+                    "position": {
+                        "abbreviation": "PR",
+                        "name": "Punt Returner",
+                        "displayName": "Punt Returner"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4374187?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3895841?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "kr": {
+                    "position": {
+                        "abbreviation": "KR",
+                        "name": "Kick Returner",
+                        "displayName": "Kick Returner"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3895841?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "ls": {
+                    "position": {
+                        "abbreviation": "LS",
+                        "name": "Long Snapper",
+                        "displayName": "Long Snapper"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3915528?lang=en&region=us"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "21",
+            "name": "3WR 1TE",
+            "positions": {
+                "wr": {
+                    "position": {
+                        "abbreviation": "WR",
+                        "name": "Wide Receiver",
+                        "displayName": "Wide Receiver"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4426502?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 4,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4363551?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 7,
+                            "slot": 1,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4689334?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4040655?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 5,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4374187?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 8,
+                            "slot": 2,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3047876?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 8,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3871102?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 6,
+                            "slot": 8,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4428796?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "lt": {
+                    "position": {
+                        "abbreviation": "LT",
+                        "name": "Left Tackle  ",
+                        "displayName": "Left Tackle"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/16713?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/5209093?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/2973014?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 4,
+                            "slot": 3,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3929922?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "lg": {
+                    "position": {
+                        "abbreviation": "LG",
+                        "name": "Left Guard  ",
+                        "displayName": "Left Guard"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4568510?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 4,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4682831?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "c": {
+                    "position": {
+                        "abbreviation": "C",
+                        "name": "Center",
+                        "displayName": "Center"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4036444?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 5,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4362845?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rg": {
+                    "position": {
+                        "abbreviation": "RG",
+                        "name": "Right Guard",
+                        "displayName": "Right Guard"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3672833?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 6,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4682831?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rt": {
+                    "position": {
+                        "abbreviation": "RT",
+                        "name": "Right Tackle",
+                        "displayName": "Right Tackle"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3059839?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4693369?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 7,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3127304?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "qb": {
+                    "position": {
+                        "abbreviation": "QB",
+                        "name": "Quarterback",
+                        "displayName": "Quarterback"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/14880?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/3120590?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4360423?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 4,
+                            "slot": 9,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4360230?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "te": {
+                    "position": {
+                        "abbreviation": "TE",
+                        "name": "Tight End",
+                        "displayName": "Tight End"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4360248?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4035020?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4374045?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 4,
+                            "slot": 10,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4034948?lang=en&region=us"
+                            }
+                        }
+                    ]
+                },
+                "rb": {
+                    "position": {
+                        "abbreviation": "RB",
+                        "name": "Running Back",
+                        "displayName": "Running Back"
+                    },
+                    "athletes": [
+                        {
+                            "rank": 1,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4430807?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 2,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4373626?lang=en&region=us"
+                            }
+                        },
+                        {
+                            "rank": 3,
+                            "slot": 11,
+                            "athlete": {
+                                "$ref": "http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4605841?lang=en&region=us"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
