@@ -217,3 +217,7 @@ __marimo__/
 
 .langgraph_api/*
 nfl_agent/experiments/artifacts/**/*.json
+nfl_agent/experiments/artifacts/**/*.html
+nfl_agent/experiments/artifacts/**/*.csv
+nfl_agent/experiments/artifacts/**/*.md
+
