@@ -4,6 +4,12 @@ An intelligent agent for fetching and analyzing NFL data from ESPN APIs.
 
 ## Quick Start
 
+Install the dependencies. I use uv for package management.
+
+```bash
+uv sync
+```
+
 save your .env file in the root of the project
 
 ```bash
