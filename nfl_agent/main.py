@@ -109,6 +109,7 @@ def extract_prediction_from_agent_response(agent_response):
 def main():
     """Main entry point for NFL stats agent CLI."""
     try:
+        print("Welcome to the NFL Agent!")
         # Get game selection from user
         game = select_game_from_week()
 
