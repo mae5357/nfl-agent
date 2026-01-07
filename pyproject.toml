@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.12.0",
+    "python-dotenv>=1.0.0",
     "cachetools>=5.5.0",
     "html5lib>=1.1",
     "httpx>=0.28.0",
@@ -14,10 +15,13 @@ dependencies = [
     "langchain-classic>=0.3.0",
     "langchain-core>=0.3.0",
     "langchain-openai>=0.0.5",
+    "numpy>=1.26.0",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.12.0",
+    "scipy>=1.11.0",
     "structlog>=25.5.0",
     "tenacity>=9.0.0",
+    "textual>=3.0.0",
     "tiktoken>=0.5.0",
     "trafilatura>=1.6.0",
 ]
@@ -37,6 +41,13 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["nfl_agent"]
+
+[project.scripts]
+get-articles = "nfl_agent.experiments.scripts.get_articles:main"
+label-articles = "nfl_agent.experiments.scripts.label_articles:main"
+article-relevance-eval = "nfl_agent.experiments.article_relevance_eval:main"
+evaluate-summaries = "nfl_agent.scripts.evaluate_summaries_tui:main"
+nfl-agent = "nfl_agent.main:main"
 
 [tool.poe.tasks.format]
 help = "Runs python formatting"
