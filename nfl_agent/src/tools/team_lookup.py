@@ -1,9 +1,10 @@
 from langchain_core.tools import tool
 
 from nfl_agent.src.models.stats import Team
-from nfl_agent.src.utils.cache_utils import get_espn_client
+from nfl_agent.src.utils.espn_client import ESPNClient
+from nfl_agent.src.utils import stats_mapper
 
-# ESPN Team ID mapping (updated for 2024 season)
+# ESPN Team ID mapping (updated for 2025 season)
 TEAM_NAME_TO_ID = {
     "arizona cardinals": "22",
     "atlanta falcons": "1",
@@ -46,24 +47,24 @@ def get_team_info(team_name: str) -> Team:
 
     team_name is case-insensitive and should be the full team name (e.g. "Kansas City Chiefs")
     """
-    client = get_espn_client()
-    
+    client = ESPNClient()
+
     # Normalize team name and look up ID
     team_name_lower = team_name.lower().strip()
     team_id = TEAM_NAME_TO_ID.get(team_name_lower)
-    
+
     if not team_id:
         # Try partial match
         for name, tid in TEAM_NAME_TO_ID.items():
             if team_name_lower in name or name in team_name_lower:
                 team_id = tid
                 break
-    
+
     if not team_id:
         available_teams = ", ".join(sorted(TEAM_NAME_TO_ID.keys()))
         raise ValueError(
             f"Team '{team_name}' not found. Available teams: {available_teams}"
         )
-    
-    team = client.build_team(team_id)
+
+    team = stats_mapper.build_team_from_client(client, team_id)
     return team
