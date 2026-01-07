@@ -6,5 +6,6 @@ def test_get_team_info():
     assert team_info is not None
 
     import json
+
     with open("team_info.json", "w") as f:
         json.dump(team_info.model_dump(mode="json"), f, indent=4)
