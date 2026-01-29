@@ -2,6 +2,12 @@
 
 An intelligent agent for fetching and analyzing NFL data from ESPN APIs.
 
+## Abstract
+
+## Abstract
+
+A toy project to demonstrait a design process for building a multi-agent system with a focus on evalutation techniques for agentic systems. I created a simple services that was able to predict weekly NFL matchups by iterratively reading news articles and stats from publically avalible APIs. I also demonstrated how I would evaluate the LLM's correctness via human-annotations and LLM-as-a-Judge. Although tested on a limited dataset, my model was able to predict the correct outcome for 81.2% of the games (compared to a random baseline of 50.0% and a sportsbook baseline of 62.5%). 
+
 ## Quick Start
 
 Install the dependencies. I use uv for package management.
@@ -166,10 +172,21 @@ The LLM-as-a-judge was asked to evaluate the summary on 3 dimensions:
 
 The agent was evaluated on the accuracy of the prediction for the next game.
 
+
 Experiment details:
 - generate predictions for all 16 games for week 18
 - get the sports betting lines (moneyline for implied probability)
 - after Monday, get the game results
+
+## Metrics
+
+| Metric | Model | Sportsbook | Random |
+|--------|-------|------------|--------|
+| Accuracy | 81.2% | 62.5% | 50.0% |
+| Brier Score | 0.1726 | 0.1989 | 0.2500 |
+| BSS vs Random | +31.0% | +20.4% | 0.0% |
+| Games Evaluated | 16 | 16 | 16 |
+
 
 ### Agent Evaluation Summary
 
