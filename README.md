@@ -4,8 +4,6 @@ An intelligent agent for fetching and analyzing NFL data from ESPN APIs.
 
 ## Abstract
 
-## Abstract
-
 A toy project to demonstrait a design process for building a multi-agent system with a focus on evalutation techniques for agentic systems. I created a simple services that was able to predict weekly NFL matchups by iterratively reading news articles and stats from publically avalible APIs. I also demonstrated how I would evaluate the LLM's correctness via human-annotations and LLM-as-a-Judge. Although tested on a limited dataset, my model was able to predict the correct outcome for 81.2% of the games (compared to a random baseline of 50.0% and a sportsbook baseline of 62.5%). 
 
 ## Quick Start
